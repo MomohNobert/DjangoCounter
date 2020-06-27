@@ -5,6 +5,14 @@
     <title>Counter</title>
 </head>
 <body>
-    <h1>Your Counter.</h1>
+    <h1>There are {{ count }} words in your text.</h1>
+    <br />
+    <h1>Your Text:</h1>
+    <p>{{ fulltext }}</p>
+
+    <h2>Word Count:</h2>
+    {% for word, count_total in word_dictionary %}
+    {{ word }} - {{ count_total }}
+    {% endfor %}
 </body>
 </html>
